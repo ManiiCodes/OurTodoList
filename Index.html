@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Dos for Mani & Gina 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>📆 To-Dos for Mani & Gina 💕</h1>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav" role="tablist" aria-label="Checklist Sections">
+      <button role="tab" aria-selected="true" aria-controls="tab-daily" id="tab-btn-daily" tabindex="0">Daily</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-weekly" id="tab-btn-weekly" tabindex="-1">Weekly</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-biweekly" id="tab-btn-biweekly" tabindex="-1">Biweekly</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-monthly" id="tab-btn-monthly" tabindex="-1">Monthly</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-extra" id="tab-btn-extra" tabindex="-1">Extras</button>
+    </nav>
+
+    <!-- Tab Panels -->
+    <section id="tab-daily" role="tabpanel" aria-labelledby="tab-btn-daily" tabindex="0" class="tab-panel active">
+      <h2>🗓 Daily</h2>
+      <ul>
+        <li><input type="checkbox" /> Say good night on call or text 🌙💤</li>
+      </ul>
+      <h2>🧠 Midweek (Wednesday)</h2>
+      <ul>
+        <li><input type="checkbox" /> “How are you *really*?” Check-In 💭🫂</li>
+      </ul>
+    </section>
+
+    <section id="tab-weekly" role="tabpanel" aria-labelledby="tab-btn-weekly" tabindex="0" class="tab-panel">
+      <h2>🎬 Once a Week</h2>
+      <ul>
+        <li><input type="checkbox" /> Movie night together 🍿🎥</li>
+      </ul>
+      <h2>📖 3x a Week</h2>
+      <ul>
+        <li><input type="checkbox" /> Reading Session 1 📚</li>
+        <li><input type="checkbox" /> Reading Session 2 📚</li>
+        <li><input type="checkbox" /> Reading Session 3 📚</li>
+      </ul>
+      <h2>💖 Sundays</h2>
+      <ul>
+        <li><input type="checkbox" /> Date Night 🌹</li>
+        <li><input type="checkbox" /> Cook “Together” Night 🍽️</li>
+        <li><input type="checkbox" /> Affirmation Exchange 💌</li>
+        <li><input type="checkbox" /> Weekly Check-In 💬</li>
+      </ul>
+    </section>
+
+    <section id="tab-biweekly" role="tabpanel" aria-labelledby="tab-btn-biweekly" tabindex="0" class="tab-panel">
+      <h2>🙏 Biweekly</h2>
+      <ul>
+        <li><input type="checkbox" /> Gratitude Sharing Night ✨</li>
+        <li><input type="checkbox" /> Prayer or Spiritual Moment 💫</li>
+      </ul>
+    </section>
+
+    <section id="tab-monthly" role="tabpanel" aria-labelledby="tab-btn-monthly" tabindex="0" class="tab-panel">
+      <h2>🗓 Monthly</h2>
+      <ul>
+        <li><input type="checkbox" /> Love Letter Exchange 💌✍🏽</li>
+        <li><input type="checkbox" /> Memory Lane Night 🖼️💫</li>
+        <li><input type="checkbox" /> “Open When” Voice Note 🎙️📦</li>
+      </ul>
+    </section>
+
+    <section id="tab-extra" role="tabpanel" aria-labelledby="tab-btn-extra" tabindex="0" class="tab-panel">
+      <h2>💌 Love Letter Creator</h2>
+      <textarea id="loveLetterInput" placeholder="Write your love letter here..."></textarea>
+      <button id="saveLoveLetterBtn">Save Letter</button>
+
+      <h2>📸 Memory Box</h2>
+      <input type="file" accept="image/*" id="memoryImageInput" />
+      <textarea id="memoryTextInput" placeholder="What does this memory mean to you?"></textarea>
+      <button id="saveMemoryBtn">Save Memory</button>
+
+      <h2>🙏 Prayer & Gratitude</h2>
+      <textarea id="prayerInput" placeholder="Write a short prayer or something you're grateful for today..."></textarea>
+      <button id="savePrayerBtn">Save Reflection</button>
+
+      <h2>🌈 Future Vision Board</h2>
+      <ul>
+        <li><input type="checkbox" /> Visit New York together 🗽</li>
+        <li><input type="checkbox" /> Attend a concert hand-in-hand 🎤</li>
+        <li><input type="checkbox" /> Build a cozy home together 🏡</li>
+        <li><input type="checkbox" /> Travel to Japan together 🇯🇵</li>
+      </ul>
+
+      <h2>💡 Quick Joy Prompts</h2>
+      <ul>
+        <li><input type="checkbox" /> Send a song that reminds you of her 🎶</li>
+        <li><input type="checkbox" /> Snap a quick selfie right now 📸</li>
+        <li><input type="checkbox" /> Share 3 things you miss about her ❤️</li>
+        <li><input type="checkbox" /> Text a spontaneous “I love you” 💬</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- Floating Love Note Button -->
+  <button id="openModalBtn" aria-label="Open Love Letter Modal" class="love-note-btn">💌 Write Love Letter</button>
+
+  <!-- Modal -->
+  <div id="loveModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="modalTitle">Write a Love Letter 💖</h2>
+      <textarea id="modalLoveLetter" placeholder="Write your love letter here..."></textarea>
+      <div class="modal-actions">
+        <button id="modalSaveBtn">Save</button>
+        <button id="modalCloseBtn">Close</button>
+      </div>
+      <p id="modalStatus" class="status-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
